@@ -1,21 +1,23 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/index/Index'
-import Dashboard from '@/components/dashboard/Dashboard'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
-    },
-    {
-      path: '/dashboard',
-      name: 'Dashboard',
-      component: Dashboard
+      component: resolve => require(['../components/index/Index.vue'], resolve),
+      children:[
+        {
+          path: '/',
+          component: resolve => require(['../components/page/VueTable.vue'], resolve)
+        },
+        {
+          path: '/dashboard',
+          component: resolve => require(['../components/page/Dashboard.vue'], resolve)
+        }
+      ]
     }
   ]
 })

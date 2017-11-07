@@ -1,9 +1,20 @@
 <template>
-  <Sidebar></Sidebar>
+    <div>
+      <Nav></Nav>
+      <Sidebar></Sidebar>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <transition name="move" mode="out-in"><router-view></router-view></transition>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>
 
 <script>
-  import Sidebar from '../sidebar/Sidebar.vue';
+  import Sidebar from '../common/Sidebar.vue';
+  import Nav from '../common/Nav.vue';
 
   export default {
     data() {
@@ -14,7 +25,8 @@
       };
     },
     components: {
-      Sidebar
+      Sidebar,
+      Nav
     }
   }
 </script>
