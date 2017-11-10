@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
+      <div class="col-sm-2 col-md-1 sidebar">
         <ul class="nav nav-sidebar">
           <li v-for="sidebar in sidebar_list" v-bind:class="{active: sidebar.is_active}" @click="toggleMenu(sidebar)">
             <a href="#">
@@ -27,7 +27,7 @@
           {
             id: 1,
             text: '服务管理',
-            is_active: true,
+            is_active: false,
             href: 'dadawdwadd',
             icon:'glyphicon-home',
             childItems: [
@@ -122,9 +122,9 @@
    */
   @media (min-width: 768px) {
     .sidebar {
-      width: 220px;
+      width: 200px;
       position: fixed;
-      top: 51px;
+      top: 52px;
       bottom: 0;
       left: 0;
       z-index: 1000;
@@ -132,12 +132,12 @@
       padding: 0;
       overflow-x: hidden;
       overflow-y: auto;
-      background-color: #f5f5f5;
+      background-color: #333744;
       border-right: 1px solid #eee;
     }
   }
   .nav-sidebar {
-    font-size: 15px;
+    font-size: 14px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -154,12 +154,17 @@
     display: block;
     border-left: 1px solid transparent;
     text-decoration: none;
+    color: #fdf8ff;
+  }
+
+  .nav-sidebar > li > a:hover,
+  .nav-sidebar > li > a:focus {
+    background-color: #428bca;
   }
 
   .nav-sidebar > .active > a,
   .nav-sidebar > .active > a:hover,
   .nav-sidebar > .active > a:focus {
-    color: #fff;
     background-color: #428bca;
   }
 
@@ -167,7 +172,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .nav-small-bar > li {
@@ -180,6 +185,12 @@
     padding: 5px 40px;
     display: block;
     text-decoration: none;
+    color: #fdf8ff;
+  }
+
+  .nav-small-bar > li > a:hover,
+  .nav-small-bar > li > a:focus {
+    background-color: #428bca;
   }
 
 
