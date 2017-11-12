@@ -11,11 +11,11 @@ export default new Router({
       children:[
         {
           path: '/',
-          component: resolve => require(['../components/page/VueTable.vue'], resolve)
+          component: resolve => require(['../components/page/Readme.vue'], resolve)
         },
         {
-          path: '/dashboard',
-          component: resolve => require(['../components/page/Dashboard.vue'], resolve)
+          path: '/table',
+          component: resolve => require(['../components/page/Table.vue'], resolve)
         }
       ]
     }

@@ -1,5 +1,9 @@
 <template>
   <div class="table-responsive">
+    <ol class="breadcrumb">
+      <li><a href="#">首页</a></li>
+      <li class="active">表格</li>
+    </ol>
     <table class="table table-hover">
       <thead>
       <tr>
@@ -48,32 +52,8 @@
 <script>
   export default {
     data: function(){
-      const self = this;
       return {
-
-      }
-    },
-    methods: {
-      changePage(values) {
-        this.information.pagination.per_page = values.perpage;
-      },
-      onSearch(searchQuery) {
-        this.query = searchQuery;
-      }
-    },
-    computed:{
-      getData(){
-        const self = this;
-        return self.information.data.filter(function (d) {
-          if(d.name.indexOf(self.query) > -1){
-            return d;
-          }
-        })
-      }
-    },
-    beforeMount(){
-      if(process.env.NODE_ENV === 'development'){
-        this.url = '/ms/table/source';
+        sidebar_list: []
       }
     }
   }

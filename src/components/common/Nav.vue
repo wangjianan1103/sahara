@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -9,7 +9,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand" href="#">后台管理系统</a>
       </div>
     </div><!-- /.container-fluid -->
   </nav>
@@ -18,81 +18,13 @@
 <script>
   export default {
     data: function () {
-      return{
-        sidebar_list: [
-          {
-            id: 1,
-            text: '服务管理',
-            is_active: true,
-            href: 'dadawdwadd',
-            icon:'glyphicon-home',
-            childItems: [
-              {
-                text: '1点',
-                href: ''
-              },
-              {
-                is_active: false,
-                text: '2点',
-                href: ''
-              }
-            ]
-          },
-          {
-            id: 2,
-            text: '产品管理',
-            is_active: false,
-            href: '',
-            icon:'glyphicon-indent-right',
-            childItems: [
-              {
-                text: '1点',
-                href: ''
-              },
-              {
-                is_active: false,
-                text: '2点',
-                href: ''
-              }
-            ]
-          },
-          {
-            id: 3,
-            text: '日志管理',
-            is_active: false,
-            href: '',
-            icon:'glyphicon-tint',
-            childItems: [
-              {
-                text: '产品信息',
-                href: ''
-              },
-              {
-                is_active: false,
-                text: '新建',
-                href: ''
-              }
-            ]
-          },
-          {
-            id: 4,
-            is_active: false,
-            icon:'glyphicon-headphones',
-            text: '星期四',
-            href: ''
-          }
-        ]
-      }
-    },
-    methods: {
-      toggleMenu: function (menu){
-
+      return {
+        sidebar_list: []
       }
     }
   };
 </script>
 
 <style scoped>
-
 
 </style>

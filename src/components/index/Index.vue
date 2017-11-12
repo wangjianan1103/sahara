@@ -1,15 +1,15 @@
 <template>
-    <div>
-      <Nav></Nav>
+  <div class="ss">
+    <Nav></Nav>
+    <div class="container-fluid">
       <Sidebar></Sidebar>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 col-md-12">
-            <transition name="move" mode="out-in"><router-view></router-view></transition>
-          </div>
+      <div class="row">
+        <div class="col-sm-10 col-md-10 col-md-offset-2 col-sm-offset-2">
+          <transition name="move" mode="out-in"><router-view></router-view></transition>
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -17,12 +17,10 @@
   import Nav from '../common/Nav.vue';
 
   export default {
-    data() {
-      const item = {
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      };
+    data: function(){
+      return {
+        sidebar_list: []
+      }
     },
     components: {
       Sidebar,
@@ -32,5 +30,7 @@
 </script>
 
 <style scoped>
-
+  .ss {
+    padding-top: 60px;
+  }
 </style>
