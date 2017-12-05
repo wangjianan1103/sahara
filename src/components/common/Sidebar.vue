@@ -129,12 +129,12 @@
       padding: 0;
       overflow-x: hidden;
       overflow-y: auto;
-      background-color: #373737;
+      background-color: #222d32;
       border-right: 1px solid #eee;
     }
   }
   .nav-sidebar {
-    font-size: 17px;
+    font-size: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -151,18 +151,18 @@
     display: block;
     border-left: 1px solid transparent;
     text-decoration: none;
-    color: #bfcbd9;
+    color: #b8c7ce;
   }
 
   .nav-sidebar > li > a:hover,
   .nav-sidebar > li > a:focus {
-    background-color: #484848;
+    background-color: rgba(0,0,0,0.1);
   }
 
   .nav-sidebar > .active > a,
   .nav-sidebar > .active > a:hover,
   .nav-sidebar > .active > a:focus {
-    background-color: #484848;
+    background-color: rgba(0,0,0,0.1);
   }
 
   /*子菜单*/
@@ -170,8 +170,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 15px;
-    background-color: #373737;
+    font-size: 13px;
+    background-color: #222d32;
   }
 
   .nav-small-bar > li {
@@ -184,19 +184,19 @@
     padding: 5px 40px;
     display: block;
     text-decoration: none;
-    color: #bfcbd9;
+    color: #b8c7ce;
   }
 
   .nav-small-bar > li > a:hover,
   .nav-small-bar > li > a:focus {
-    background-color: #484848;
+    background-color: rgba(0,0,0,0.1);
   }
 
   .nav-small-bar > .active > a,
   .nav-small-bar > .active > a:hover,
   .nav-small-bar > .active > a:focus {
     color: #1976d2;
-    background-color: #373737;
+    background-color: #222d32;
   }
 
 </style>
