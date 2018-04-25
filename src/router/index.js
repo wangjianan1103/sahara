@@ -16,6 +16,14 @@ export default new Router({
         {
           path: '/table',
           component: resolve => require(['../components/page/Table.vue'], resolve)
+        },
+        {
+          path: '/blog_list',
+          component: resolve => require(['../components/page/BlogList.vue'], resolve)
+        },
+        {
+          path: '/blog_add',
+          component: resolve => require(['../components/page/AddBlog.vue'], resolve)
         }
       ]
     }

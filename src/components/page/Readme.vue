@@ -26,6 +26,8 @@
 
       # build for production with minification
       npm run build
+
+      npm install mavon-editor --save
       </code></pre>
       <h2><a href="#期望目标" id="期望目标">期望目标</a></h2>
       <ul>

@@ -14,7 +14,7 @@
 
 <script>
   import Sidebar from '../common/Sidebar.vue';
-  import Nav from '../common/Nav.vue';
+  import Navb from '../common/Navb.vue';
 
   export default {
     data: function(){
@@ -24,7 +24,7 @@
     },
     components: {
       Sidebar,
-      Nav
+      Navb
     }
   }
 </script>

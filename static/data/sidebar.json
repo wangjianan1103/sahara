@@ -9,6 +9,24 @@
     },
     {
       "id": 2,
+      "text": "博客系统",
+      "is_active": false,
+      "icon":"glyphicon glyphicon-pencil",
+      "item_list": [
+        {
+          "text": "博文",
+          "href": "/blog_list",
+          "is_active": false
+        },
+        {
+          "text": "添加",
+          "href": "/blog_add",
+          "is_active": false
+        }
+      ]
+    },
+    {
+      "id": 3,
       "text": "基础表格",
       "is_active": false,
       "icon":"glyphicon-indent-right",
@@ -26,7 +44,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "text": "表单",
       "is_active": false,
       "icon":"glyphicon-tint",
@@ -44,7 +62,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "text": "富文本编辑器",
       "is_active": false,
       "icon":"glyphicon-tint",
@@ -62,7 +80,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "text": "文件上传",
       "is_active": false,
       "icon":"glyphicon-home",
@@ -80,7 +98,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "text": "图表管理",
       "is_active": false,
       "icon":"glyphicon-home",
