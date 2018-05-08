@@ -1,6 +1,6 @@
 <template>
   <div class="ss">
-    <Nav></Nav>
+    <Navb></Navb>
     <div class="container-fluid">
       <Sidebar></Sidebar>
       <div class="row">

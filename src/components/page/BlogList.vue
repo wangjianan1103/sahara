@@ -24,7 +24,7 @@
           <td>{{model.description | formatString(50)}}</td>
           <td>
             <button type="button" class="btn btn-info btn-sm">编辑</button>
-            <button type="button" class="btn btn-info btn-sm">删除</button>
+            <button type="button" class="btn btn-info btn-sm" v-on:click="del_blog(model.gid)">删除</button>
           </td>
         </tr>
       </tbody>
@@ -35,28 +35,52 @@
 <script>
   import {formatDate} from '../utils/FormatUtils.js';
   import {formatString} from '../utils/FormatUtils.js';
+
   export default {
-    data: function(){
+    data: function () {
       return {
-        blog_list: [
-        ]
+        blog_list: []
       }
     },
-    mounted: function () {
-      this.$http({
-        url: 'http://api.oopmind.com/manage/getBills',
-        method: 'POST',
-        body: {
-        },
-        headers: {
-          'Content-Type': 'application/json'
+    created: function () {
+      this.fetchData();
+    },
+    watch: {
+      // 如果路由有变化，会再次执行该方法
+      '$route': 'fetchData'
+    },
+    methods: {
+      del_blog: function (gid) {
+        if (gid === null) {
+          return;
         }
-      }).then(function (res) {
-        this.blog_list = res.body.content;
-        console.info(this.blog_list)
-      }, function (err) {
-        console.info(err)
-      });
+
+        let _this = this;
+        this.$axios.defaults.headers.post['Content-Type'] = 'application/json; charset=utf-8';
+        this.$axios.post('/manage/blog/delete', gid)
+          .then(function (response) {
+            let data = response.data;
+            _this.$router.go({path: '/blog_list', query: {}});
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      },
+      fetchData: function () {
+        let _this = this;
+        this.$axios.defaults.headers.post['Content-Type'] = 'application/json; charset=utf-8';
+        this.$axios.post('/manage/getBills', {})
+          .then(function (response) {
+            let data = response.data;
+            if (data.status === 0) {
+              _this.blog_list = data.content;
+            }
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+
+      }
     },
     filters: {
       formatDate(time) {
@@ -67,7 +91,7 @@
       }
     },
 
-  }
+  };
 </script>
 
 <style></style>
